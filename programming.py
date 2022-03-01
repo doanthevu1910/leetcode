@@ -75,3 +75,34 @@ def arraySign(nums):
 
     return sign
 
+def canMakeArithmeticProgression(arr):
+    arr.sort()
+    dif = arr[1] - arr[0]
+    for i in range(len(arr) - 1):
+        if arr[i + 1] - arr[i] != dif:
+            return False
+    return True
+
+def isHappy(n):
+    s = {n}
+    while n != 1:
+        tmp = sum([int(c) ** 2 for c in str(n)])
+        if tmp in s:
+            return False
+        s.add(tmp)
+        n = tmp
+    return True
+
+def areAlmostEqual(self, s1: str, s2: str) -> bool:
+    if set(s1) != set(s2):
+        return False
+    mark = 0
+    for i in range(len(s1)):
+        if s1[i] != s2[i]:
+            mark += 1
+        if mark > 2:
+            return False
+    return True
+
+
+
