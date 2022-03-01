@@ -17,3 +17,4 @@ def searchInsert(nums, target):
         else:
             return i
     return i
+
