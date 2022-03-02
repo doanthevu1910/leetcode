@@ -35,5 +35,26 @@ def intersect(nums1, nums2):
 
         return result
 
+matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]]
 
+import numpy as np
 
+def searchMatrix(matrix, target):
+    reshaped = np.reshape(matrix, (1, len(matrix) * len(matrix[0])))
+    reshaped = reshaped[0]
+    return any(element == target for element in reshaped)
+
+searchMatrix(matrix, 3)
+
+def checkValid(matrix):
+    newmat = matrix + list(zip(*matrix))
+
+    return all(len(set(nums)) == len(nums) for nums in newmat)
+
+matrix = [[1,2,3],[3,1,2],[2,3,1]]
+
+# matrix = [[1,2,3],[4,5,6],[7,8,9]]
+
+nums = (matrix + list(zip(*matrix)))[0]
+
+len(nums)

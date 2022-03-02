@@ -134,3 +134,42 @@ def checkStraightLine(coordinates):
 coordinates = [[1,2],[2,3],[3,4],[4,5],[5,6],[6,7]]
 
 checkStraightLine(coordinates)
+
+arr = [1,4,2,5,3]
+
+arr[0:3]
+arr[1:4]
+arr[2:5]
+
+sub = []
+i = 0
+while i <= len(arr) // 2:
+    length = 2*i + 1
+    j = 0
+
+    while j <= len(arr) - 2:
+        sub.append(arr[j:(j+length)])
+        j += 1
+
+    i +=1
+
+sub
+
+def sumOddLengthSubarrays(arr):
+    total = 0
+    for i in range(1, len(arr) + 1, 2):
+        for k in range(len(arr)):
+            if k + i > len(arr):
+                break
+            else:
+                total += sum(arr[k:k + i])
+
+    return total
+
+accounts = [[1,2,3],[3,2,1]]
+
+def maximumWealth(accounts):
+    return max(sum(accounts[i]) for i in range(len(accounts)))
+
+# day 7
+
