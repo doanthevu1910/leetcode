@@ -20,7 +20,6 @@ def merge(nums1, m, nums2, n):
 
 import numpy as np
 
-
 def intersect(nums1, nums2):
         """
         :type nums1: List[int]
@@ -59,6 +58,7 @@ nums = (matrix + list(zip(*matrix)))[0]
 
 len(nums)
 
+#day 6
 s = "loveleetcode"
 
 c = Counter(s)
@@ -74,3 +74,30 @@ def firstUniqChar(s):
         if c[s[i]] == 1:
             return i
     return -1
+
+ransomNote = "aa"
+magazine = "aab"
+
+def canConstruct(ransomNote, magazine):
+    c1 = Counter(ransomNote)
+    c2 = Counter(magazine)
+
+    sum = 0
+
+    for i in range(len(ransomNote)):
+        if c1[ransomNote[i]] <= c2[ransomNote[i]]:
+            sum += 1
+
+    return sum == len(ransomNote)
+
+canConstruct('a', 'b')
+
+s = "anagram"
+t = "nagaram"
+
+def isAnagram(s, t):
+    return Counter(s) == Counter(t)
+
+isAnagram(s, t)
+
+# day 7
