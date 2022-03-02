@@ -58,3 +58,19 @@ matrix = [[1,2,3],[3,1,2],[2,3,1]]
 nums = (matrix + list(zip(*matrix)))[0]
 
 len(nums)
+
+s = "loveleetcode"
+
+c = Counter(s)
+
+c[s[2]]
+
+s[2]
+from collections import Counter
+
+def firstUniqChar(s):
+    c = Counter(s)
+    for i in range(len(s)):
+        if c[s[i]] == 1:
+            return i
+    return -1
