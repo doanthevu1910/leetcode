@@ -172,4 +172,21 @@ def maximumWealth(accounts):
     return max(sum(accounts[i]) for i in range(len(accounts)))
 
 # day 7
+mat = [[1,2,3], [4,5,6], [7,8,9]]
+
+def diagonalSum(mat):
+    i = 0
+    sum1 = 0
+    while i <= len(mat)-1:
+        sum1 += mat[i][i] + list(reversed(mat[i]))[i]
+        i += 1
+
+    if len(mat) % 2 == 1:
+        center = len(mat) // 2
+        return sum1 - mat[center][center]
+    else:
+        return sum1
+
+mat = [[1,1,1,1], [1,1,1,1], [1,1,1,1], [1,1,1,1]]
+diagonalSum(mat)
 
