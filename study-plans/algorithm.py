@@ -116,3 +116,45 @@ def middleNode(head):
 
 # day 6
 
+s = "abcabcbb"
+
+list(s)
+
+# def lengthOfLongestSubstring(s):
+#     result = []
+#
+#     for i in list(s):
+#         if i not in result:
+#             result.append(i)
+#
+#     return len(result)
+
+s = "pwwkew"
+
+all_sub = [s[i: j] for i in range(len(s)) for j in range(i + 1, len(s) + 1)]
+
+all_sub.remove(s)
+
+all_sub
+
+sub1 = all_sub[0]
+
+def lengthOfLongestSubstring(s):
+    all_sub = [s[i: j] for i in range(len(s)) for j in range(i + 1, len(s) + 1)]
+
+    all_sub = all_sub.remove(s)
+
+    def count_unique(a):
+        result = []
+        for i in list(a):
+            if i not in result:
+                result.append(i)
+        return len(result)
+
+    count = []
+
+    for i in range(len(all_sub)):
+        count.append(count_unique(all_sub[i]))
+
+    return max(count)
+
