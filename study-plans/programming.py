@@ -104,5 +104,33 @@ def areAlmostEqual(self, s1: str, s2: str) -> bool:
             return False
     return True
 
+def nextGreaterElement(nums1, nums2):
+    result = []
+    for i in range(len(nums1)):
+        for j in range(len(nums2)):
+            if nums1[i] == nums2[j]:
+                if j == len(nums2):
+                    result.append(-1)
+                elif nums2[j] < nums2[j+1]:
+                    result.append(nums2[j+1])
+    return result
 
+nums1 = [4,1,2]
+nums2 = [1,3,4,2]
 
+nextGreaterElement(nums1, nums2)
+
+def checkStraightLine(coordinates):
+
+    for i in range(len(coordinates)):
+        a = coordinates[i]
+        b = coordinates[i+1]
+        c = coordinates[i+2]
+        if (b[1]-a[1])/(b[0]-a[0]) == (c[1]-b[1])/(c[0]-b[0]):
+            return True
+        else:
+            return False
+
+coordinates = [[1,2],[2,3],[3,4],[4,5],[5,6],[6,7]]
+
+checkStraightLine(coordinates)
