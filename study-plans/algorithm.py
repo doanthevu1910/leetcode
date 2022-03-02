@@ -114,3 +114,5 @@ n = [1, 2, 3, 4, 5, 6]
 def middleNode(head):
     return n[len(n) // 2]
 
+# day 6
+
