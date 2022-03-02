@@ -107,3 +107,10 @@ def generate(numRows):
     return pt
 
 generate(5)
+
+n = [1, 2, 3, 4, 5, 6]
+
+
+def middleNode(head):
+    return n[len(n) // 2]
+
