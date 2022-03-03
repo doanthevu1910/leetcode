@@ -191,3 +191,66 @@ mat = [[1,1,1,1], [1,1,1,1], [1,1,1,1], [1,1,1,1]]
 diagonalSum(mat)
 
 #day 8
+
+word1 = "a b"
+
+word1.strip()
+
+word2 = "pqrs"
+
+len(word2) - len(word1)
+
+c = word1 + ' ' + ' '
+
+len(c)
+
+word1[0] + word2[0]
+
+def mergeAlternately(word1, word2):
+
+    a = ' '
+
+    if len(word1) > len(word2):
+        i = 0
+        while i <= len(word1) - len(word2):
+            word2 = word2 + ' '
+            i += 1
+
+        for i in range(len(word1)):
+            a += word1[i] + word2[i]
+            i += 1
+
+    if len(word1) < len(word2):
+        i = 0
+        while i <= len(word2) - len(word1):
+            word1 = word1 + ' '
+            i += 1
+
+        for i in range(len(word1)):
+            a += word1[i] + word2[i]
+            i += 1
+
+    else:
+        for i in range(len(word1)):
+            a += word1[i] + word2[i]
+
+    return "".join(a.split())
+
+word1 = "ab"
+word2 = "pqrs"
+
+mergeAlternately(word1, word2)
+
+s = "abcd"
+t = "abcde"
+
+from collections import Counter
+
+cs = Counter(s)
+ct = Counter(t)
+
+a = ct - cs
+
+return a.most_common()[0][0]
+
+#day 9
