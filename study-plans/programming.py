@@ -190,3 +190,4 @@ def diagonalSum(mat):
 mat = [[1,1,1,1], [1,1,1,1], [1,1,1,1], [1,1,1,1]]
 diagonalSum(mat)
 
+#day 8

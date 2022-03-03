@@ -158,3 +158,34 @@ def lengthOfLongestSubstring(s):
 
     return max(count)
 
+#day 7
+
+image = [[1,1,1],[1,1,0],[1,0,1]]
+sr = 1
+sc = 1
+newColor = 2
+
+def floodFill(image, sr, sc, newColor):
+    if sr >= 1 and sc >=1:
+        image[sr - 1][sc - 1] = newColor
+        image[sr - 1][sc] = newColor
+        image[sr - 1][sc + 1] = newColor
+        image[sr][sc - 1] = newColor
+        image[sr][sc] = newColor
+        image[sr + 1][sc - 1] = newColor
+
+    elif sr >= 1:
+        image[sr - 1][sc] = newColor
+        image[sr - 1][sc + 1] = newColor
+        image[sr][sc] = newColor
+
+    else:
+        image[sr][sc - 1] = newColor
+        image[sr][sc] = newColor
+        image[sr + 1][sc - 1] = newColor
+
+    return image
+
+
+
+floodFill([[0,0,0],[0,0,0]], 0, 0, 2)
