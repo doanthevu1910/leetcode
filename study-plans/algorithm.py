@@ -206,3 +206,5 @@ singleNumber(nums)
 
 round(math.log(536870912, 2), 5).is_integer()
 
+aa = dict(zip([range(1, 27), "abcdefghijklmnopqrstuvwxyz"))
+

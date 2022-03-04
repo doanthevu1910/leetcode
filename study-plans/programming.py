@@ -251,6 +251,36 @@ ct = Counter(t)
 
 a = ct - cs
 
-return a.most_common()[0][0]
+# return a.most_common()[0][0]
 
 #day 9
+
+#day 10
+
+def hammingWeight(n):
+    c = 0
+    while n:
+        c += 1
+        n &= n - 1
+    return c
+
+hammingWeight(10)
+
+arr = [0,1,2,3,4,5,6,7,8]
+
+def sortByBits(arr):
+    bits = []
+
+    for i in range(len(arr)):
+        bits.append(hammingWeight(arr[i]))
+
+    arrbits = dict(zip(arr, bits))
+
+    newdict = dict(sorted(arrbits.items(), key=lambda item: item[1]))
+
+    answer = list(newdict.keys())
+
+    return answer
+
+sortByBits([0,1,2,3,4,5,6,7,8])
+
