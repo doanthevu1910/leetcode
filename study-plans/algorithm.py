@@ -1,3 +1,6 @@
+import math
+
+
 def firstBadVersion(n):
     left = 1
     right = n
@@ -189,3 +192,17 @@ def floodFill(image, sr, sc, newColor):
 
 
 floodFill([[0,0,0],[0,0,0]], 0, 0, 2)
+
+#day 14
+
+from collections import Counter
+
+nums = [2,2,3]
+
+def singleNumber(nums):
+    return min(Counter(nums), key=Counter(nums).get)
+
+singleNumber(nums)
+
+round(math.log(536870912, 2), 5).is_integer()
+
