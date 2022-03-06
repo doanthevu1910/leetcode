@@ -15,3 +15,4 @@ len(s.split()[len(s.split())-1])
 bin(1010+1011)
 
 int('12', 2)
+
