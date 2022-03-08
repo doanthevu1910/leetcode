@@ -1,4 +1,4 @@
-strs = ["flower","flow","flight"]
+strs = ["flower", "flow", "flight"]
 
 a = list(zip(*strs))
 
