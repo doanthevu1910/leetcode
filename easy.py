@@ -47,3 +47,10 @@ for i in range(len(first)):
 
 result
 
+from collections import Counter
+
+jewels = "aA"
+stones = "aAAbbbb"
+
+Counter(jewels)
+sum += Counter(stones)[jewels[i]]
