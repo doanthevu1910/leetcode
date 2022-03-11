@@ -135,5 +135,22 @@ class Solution(object):
 
             return list(result.values())
 
+def combinations(nums):
+        result = []
 
+        def backtracking(n, k, index, nums):
+            nums = nums or []
+
+            if len(nums) == k:
+                result.append(nums[:])
+                return
+
+            for i in range(index, n):
+                nums.append(i + 1)
+                backtracking(n, k, i + 1, nums)
+                nums.pop()
+
+        backtracking(n, k, 0, None)
+
+        return result
 
