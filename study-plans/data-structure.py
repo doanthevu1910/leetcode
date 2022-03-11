@@ -100,7 +100,40 @@ def isAnagram(s, t):
 
 isAnagram(s, t)
 
-# day 7
+# day 11
+
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution(object):
+    def levelOrder(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[List[int]]
+        """
+        if root:
+            queue = [(1, root)]
+            temp = []
+            result = {1: []}
+
+            while queue:
+                i, node = queue.pop(0)
+
+                if node.left:
+                    queue.append((i + 1, node.left))
+                    result[i + 1] = []
+
+                if node.right:
+                    queue.append((i + 1, node.right))
+                    result[i + 1] = []
+
+                result[i] += [node.val]
+                print(result)
+
+            return list(result.values())
 
 
 
