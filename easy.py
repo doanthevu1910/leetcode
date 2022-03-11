@@ -119,4 +119,22 @@ class Solution(object):
 
         return count
 
+s = "1 box has 3 blue 4 red 6 green and 12 yellow marbles"
+
+s.isdigit()
+
+import re
+
+numbers = re.findall(r'\d+', s)
+
+sorted(numbers) == numbers
+
+set('ab')
+
+set('aab')
+
+numbers
+
+if all(x == numbers[0] for x in numbers):
+    return False
 
