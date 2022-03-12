@@ -147,7 +147,77 @@ class Solution(object):
         """
         return ''.join(word1) == ''.join(word2)
 
+sentence = "thequickbrownfoxjumpsoverthelazydog"
+
+sentence1 = "quickbrownfoxjumpsoverthelazydog"
+
+a = list(set(sentence))
+
+b = list(set(sentence1))
+
+a == b
+
+s = "Hello how are you Contestant"
+
+' '.join(s.split()[0:4])
 
 
+def replaceDigits(s):
+    """
+    :type s: str
+    :rtype: str
+    """
+    new_string = ''
 
+    for i in range(len(s)):
+        if i % 2:
+            new_string += str(chr(ord(s[i - 1]) + int(s[i])))
+    else:
+        new_string += s[i]
 
+    return new_string
+
+replaceDigits("a1c1e1")
+
+gain = [-5,1,5,0,-7]
+
+nums = [int(x) for x in gain]
+
+int(gain[0])
+
+number = 122322
+
+def getdigits(number):
+    num_str = str(number)
+    ans = []
+    for num in num_str:
+      ans.append(num)
+    return ans
+
+getdigits(number)
+
+digits = getdigits(number)
+
+a = sorted(digits, reverse=True)
+
+int(''.join(a))
+
+class Solution(object):
+    def maximum69Number(self, num):
+        """
+        :type num: int
+        :rtype: int
+        """
+
+        def getdigits(number):
+            num_str = str(number)
+            ans = []
+            for num in num_str:
+                ans.append(num)
+            return ans
+
+        digits = getdigits(num)
+
+        ans = sorted(digits, reverse=True)
+
+        return int(''.join(ans))
