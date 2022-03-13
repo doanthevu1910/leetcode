@@ -277,3 +277,15 @@ class Solution(object):
         else:
             return num % 10 != 0
 
+ s = "aaabb"
+
+ from collections import Counter
+
+a = Counter(s)
+
+len(a)
+
+a['a']
+
+return num in (6, 28, 496, 8128, 33550336)
+
