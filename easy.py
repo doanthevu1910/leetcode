@@ -258,3 +258,4 @@ class Solution(object):
 
         return gcd(max(nums), min(nums))
 
+s
