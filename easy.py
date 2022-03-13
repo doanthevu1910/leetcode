@@ -261,3 +261,19 @@ class Solution(object):
 coordinates = "a1"
 
 coordinates[0]
+
+nums = [12,345,2,6,7896]
+
+len(str(nums[0]))
+
+class Solution(object):
+    def isSameAfterReversals(self, num):
+        """
+        :type num: int
+        :rtype: bool
+        """
+        if num == 0:
+            return True
+        else:
+            return num % 10 != 0
+
