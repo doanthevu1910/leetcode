@@ -237,3 +237,24 @@ class Solution(object):
                 nums[i] = nums[i - 1] + 1
 
         return count
+
+
+class Solution(object):
+    def findGCD(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+
+        def gcd(a, b):
+            """Calculate the Greatest Common Divisor of a and b.
+
+            Unless b==0, the result will have the same sign as b (so that when
+            b is divided by it, the result comes out positive).
+            """
+            while b:
+                a, b = b, a % b
+            return a
+
+        return gcd(max(nums), min(nums))
+
