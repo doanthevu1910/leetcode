@@ -258,3 +258,6 @@ class Solution(object):
 
         return gcd(max(nums), min(nums))
 
+coordinates = "a1"
+
+coordinates[0]
