@@ -289,3 +289,36 @@ a['a']
 
 return num in (6, 28, 496, 8128, 33550336)
 
+import string
+
+def int_to_base(n, N):
+    """ Return base N representation for int n. """
+    base_n_digits = digits + ascii_lowercase + ascii_uppercase
+    result = ""
+    if n < 0:
+        sign = "-"
+        n = -n
+    else:
+        sign = ""
+    while n > 0:
+        q, r = divmod(n, N)
+        result += base_n_digits[r]
+        n = q
+    if result == "":
+        result = "0"
+    return sign + "".join(reversed(result))
+
+int_to_base(34, 6)
+
+nums = [1,2,3,2]
+
+import numpy as np
+
+np.unique(nums)
+
+nums.count(item) == 1
+
+grid = [[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]
+array = np.reshape(grid, (1, len(grid) * len(grid[0])))[0]
+
+array
