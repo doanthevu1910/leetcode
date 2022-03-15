@@ -323,3 +323,4 @@ array = np.reshape(grid, (1, len(grid) * len(grid[0])))[0]
 
 array
 
+
