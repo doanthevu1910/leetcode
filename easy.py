@@ -323,4 +323,20 @@ array = np.reshape(grid, (1, len(grid) * len(grid[0])))[0]
 
 array
 
+num = [1,2,0,0]
+k = 34
 
+new = int(''.join([str(x) for x in num])) + k
+
+[int(x) for x in str(new)]
+
+
+class Solution(object):
+    def addToArrayForm(self, num, k):
+        """
+        :type num: List[int]
+        :type k: int
+        :rtype: List[int]
+        """
+
+        return [int(x) for x in str(int(''.join([str(x) for x in num])) + k)]
