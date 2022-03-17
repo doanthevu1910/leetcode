@@ -340,3 +340,27 @@ class Solution(object):
         """
 
         return [int(x) for x in str(int(''.join([str(x) for x in num])) + k)]
+
+nums1 = [1,1,3,2]
+nums2 = [2,3]
+nums3 = [3]
+
+new = nums1 + nums2 + nums3
+
+from collections import Counter
+
+Counter(new)[new]
+
+import numpy as np
+
+class Solution(object):
+    def searchMatrix(self, matrix, target):
+        """
+        :type matrix: List[List[int]]
+        :type target: int
+        :rtype: bool
+        """
+        reshaped = np.reshape(matrix, (1, len(matrix) * len(matrix[0])))
+        reshaped = reshaped[0]
+        return any(element == target for element in reshaped)
+
