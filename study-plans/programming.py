@@ -302,3 +302,4 @@ class Solution(object):
             return not r and all(x in s for x in range(mini, maxi, q))
 
         return [check(nums[i:j + 1]) for i, j in zip(l, r)]
+
