@@ -283,3 +283,22 @@ def sortByBits(arr):
     return answer
 
 sortByBits([0,1,2,3,4,5,6,7,8])
+
+
+class Solution(object):
+    def checkArithmeticSubarrays(self, nums, l, r):
+        """
+        :type nums: List[int]
+        :type l: List[int]
+        :type r: List[int]
+        :rtype: List[bool]
+        """
+
+        def check(A):
+            s, n = set(A), len(A)
+            if len(s) < n: return len(s) == 1
+            maxi, mini = max(s), min(s)
+            q, r = divmod(maxi - mini, n - 1)
+            return not r and all(x in s for x in range(mini, maxi, q))
+
+        return [check(nums[i:j + 1]) for i, j in zip(l, r)]
