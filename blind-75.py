@@ -19,6 +19,10 @@ def isPalindrome(s):
     s = ''.join(ch for ch in s if ch.isalnum()).lower()
     return s == s[::-1]
 
+def isPalindrome(s):
+    s = ''.join(ch for ch in s if ch.isalnum()).lower()
+    return s == s[::-1]
+
 def countSubstrings(s):
 
     sub = [s[i: j] for i in range(len(s)) for j in range(i + 1, len(s) + 1)]
