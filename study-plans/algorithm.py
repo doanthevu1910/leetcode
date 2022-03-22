@@ -208,3 +208,21 @@ round(math.log(536870912, 2), 5).is_integer()
 
 aa = dict(zip([range(1, 27), "abcdefghijklmnopqrstuvwxyz"))
 
+class Solution(object):
+    def subsetsWithDup(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        n = len(nums)
+        output = [[]]
+        
+        for num in nums:
+            output += [curr + [num] for curr in output]
+        
+        res = []
+        for x in output:
+            if x not in res:
+                res.append(x)
+        
+        return res
