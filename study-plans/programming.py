@@ -306,3 +306,14 @@ class Solution(object):
 def canMeasureWater(self, x, y, z):
     from fractions import gcd
     return z == 0 or x + y >= z and z % gcd(x, y) == 0
+
+x = 25
+
+print(x if x >= 40 else 0)
+
+def CallOption(x):
+    if x >= 40:
+        return x
+    return 0
+
+CallOption(50)
