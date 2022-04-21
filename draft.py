@@ -133,3 +133,21 @@ def f(x):
 lst = [5, 10, 15]
 
 sum(map(f, lst))
+
+def main(list_1):
+    HHI_1 = 0
+    HHI_2 = 0
+    for i in list_1:
+        HHI_1 += round(((i/sum(list_1))*100)**2)
+    list_2 = list_1.append(20)
+    for j in list_2:
+        HHI_2 += round(((j/sum(list_2))*100)**2)
+    return abs(HHI_2 - HHI_1)
+
+main([8, 6, 45, 15, 7, 33, 18])
+
+list_1 = [8, 6, 45, 15, 7, 33, 18]
+
+list_2 = list_1 + [20]
+
+list_2
