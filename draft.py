@@ -119,3 +119,17 @@ for i in range(len(demand)):
 
 count
 
+dict = {'melon': 6, 'r': 9}
+
+dict['melon']
+
+for key in dict:
+    print(key)
+    print(dict[key])
+
+def f(x):
+    return 5*x + 6
+
+lst = [5, 10, 15]
+
+sum(map(f, lst))
