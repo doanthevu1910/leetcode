@@ -151,3 +151,15 @@ list_1 = [8, 6, 45, 15, 7, 33, 18]
 list_2 = list_1 + [20]
 
 list_2
+
+import pandas as pd
+
+df = pd.read_csv('E:/movies.csv')
+
+count_character(df['Review'])/15000
+
+x = 'otwotwotwykuhpotwjartkpfaehcbm'
+
+sub = x[0:3]
+
+[i for i in range(len(x)) if x.startswith(x[0:3], i)]
