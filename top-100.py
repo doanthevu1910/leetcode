@@ -26,7 +26,4 @@ def longestPalindrome(s):
 
     return max(palin, key=len)
 
-longestPalindrome(s)
-
-
 
